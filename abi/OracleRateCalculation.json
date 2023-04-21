@@ -1,0 +1,66 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "OracleRateCalculation",
+  "sourceName": "contracts/OracleRateCalculation.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "DECIMAL_PRECISION",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MAX_ORACLE_RATE_PERCENTAGE",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "oracleKey",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "deviationPyth",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "publishTimePyth",
+          "type": "uint256"
+        }
+      ],
+      "name": "getOracleRate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "oracleRate",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5061014a806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063374438d614610046578063a20baee614610081578063fb2ba76f14610089575b600080fd5b61006f6004803603606081101561005c57600080fd5b5080359060208101359060400135610091565b60408051918252519081900360200190f35b61006f6100fd565b61006f610109565b6000630a0b2a8960e31b8414156100ec5760008242116100b3574283036100b7565b8242035b612710670de0b6b3a76400008202048501925090506608e1bc9bf040008211156100e6576608e1bc9bf0400091505b506100f6565b506608e1bc9bf040005b9392505050565b670de0b6b3a764000081565b6608e1bc9bf040008156fea26469706673582212202454d8ac8c7ddce44a29cd57be693a16f9231e680da8531a4eef2a265e856a3264736f6c634300060b0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c8063374438d614610046578063a20baee614610081578063fb2ba76f14610089575b600080fd5b61006f6004803603606081101561005c57600080fd5b5080359060208101359060400135610091565b60408051918252519081900360200190f35b61006f6100fd565b61006f610109565b6000630a0b2a8960e31b8414156100ec5760008242116100b3574283036100b7565b8242035b612710670de0b6b3a76400008202048501925090506608e1bc9bf040008211156100e6576608e1bc9bf0400091505b506100f6565b506608e1bc9bf040005b9392505050565b670de0b6b3a764000081565b6608e1bc9bf040008156fea26469706673582212202454d8ac8c7ddce44a29cd57be693a16f9231e680da8531a4eef2a265e856a3264736f6c634300060b0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
