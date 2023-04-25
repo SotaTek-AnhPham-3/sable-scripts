@@ -22,6 +22,7 @@ async function main() {
     const systemStateAddress = addresses.addresses.systemState;
     const value = 0;
     const zeroBytes = defaultAbiCoder.encode(["uint"], [0]);
+    const salt = defaultAbiCoder.encode(["uint"], [0]);
 
     // Variables to change
     const DELAY = 11;
@@ -31,7 +32,7 @@ async function main() {
     const iface = new Interface(["function setLUSDGasCompensation(uint)"]);
     const DATA = iface.encodeFunctionData("setLUSDGasCompensation", [NEW_GAS_COMPENSATION.toString()]);
 
-    let tx = await Contract.connect(signer).execute(systemStateAddress, value, DATA, zeroBytes, zeroBytes);
+    let tx = await Contract.connect(signer).execute(systemStateAddress, value, DATA, zeroBytes, salt);
     await tx.wait();
 
     console.log("Execute success!");

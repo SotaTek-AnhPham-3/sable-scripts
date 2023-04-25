@@ -22,6 +22,7 @@ async function main() {
     const systemStateAddress = addresses.addresses.systemState;
     const value = 0;
     const zeroBytes = defaultAbiCoder.encode(["uint"], [0]);
+    const salt = defaultAbiCoder.encode(["uint"], [0]);
 
     // Variables to change
     const NEW_MIN_DEBT = ethers.utils.parseEther("100");
@@ -29,7 +30,7 @@ async function main() {
     const iface = new Interface(["function setMinNetDebt(uint)"]);
     const DATA = iface.encodeFunctionData("setMinNetDebt", [NEW_MIN_DEBT.toString()]);
 
-    let tx = await Contract.connect(signer).execute(systemStateAddress, value, DATA, zeroBytes, zeroBytes);
+    let tx = await Contract.connect(signer).execute(systemStateAddress, value, DATA, zeroBytes, salt);
     await tx.wait();
 
     console.log("Execute success!");

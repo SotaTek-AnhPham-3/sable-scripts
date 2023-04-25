@@ -22,6 +22,7 @@ async function main() {
     const systemStateAddress = addresses.addresses.systemState;
     const value = 0;
     const zeroBytes = defaultAbiCoder.encode(["uint"], [0]);
+    const salt = defaultAbiCoder.encode(["uint"], [0]);
 
     // Variables to change
     const DELAY = 11;
@@ -32,7 +33,7 @@ async function main() {
     NEW_MCR = ethers.utils.parseEther(NEW_MCR.toString()).div(100)
     const DATA = iface.encodeFunctionData("setMCR", [NEW_MCR.toString()]);
 
-    let tx = await Contract.connect(signer).schedule(systemStateAddress, value, DATA, zeroBytes, zeroBytes, DELAY);
+    let tx = await Contract.connect(signer).schedule(systemStateAddress, value, DATA, zeroBytes, salt, DELAY);
     await tx.wait();
 
     console.log("Schedule success!");
