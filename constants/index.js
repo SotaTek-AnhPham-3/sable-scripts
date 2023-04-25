@@ -1,9 +1,9 @@
 export const addresses = {
     MockPyth: {
-        setPrice: "",
+        setPrice: "0x651Cc56701237749f476a1331eB6524acc6b6B77",
     },
     MockChainlink: {
-        setPrice: "",
+        setPrice: "0x58C068322827e99bc5b9d49f1c91f0D27d053bB5",
     },
     TimeLock: {
         oracle: "0xb66B820623a2cD73a5d5fDD64a7c2f2B2f2D7c79",
