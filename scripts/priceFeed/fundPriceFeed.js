@@ -25,6 +25,7 @@ async function main() {
     console.log("balanceBefore:", Number(balanceBefore))
 
     const transation = await signer.sendTransaction(tx);
+    await transation.wait();
 
     console.log("Funding success!");
 
@@ -40,4 +41,5 @@ main().catch(error => {
   
 /*
 ENV=demo npx hardhat run scripts/priceFeed/fundPriceFeed.js --network bscTestnet
+ENV=oracle npx hardhat run scripts/priceFeed/fundPriceFeed.js --network bscTestnet
 */

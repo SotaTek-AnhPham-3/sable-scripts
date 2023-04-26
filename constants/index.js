@@ -1,4 +1,4 @@
-export const addresses = {
+const addresses = {
     MockPyth: {
         setPrice: "0x651Cc56701237749f476a1331eB6524acc6b6B77",
     },
@@ -77,4 +77,8 @@ export const addresses = {
         oracle: "",
         setPrice: "",
     }
+}
+
+module.exports = {
+    addresses
 }
