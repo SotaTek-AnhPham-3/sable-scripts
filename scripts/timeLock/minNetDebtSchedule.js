@@ -26,7 +26,7 @@ async function main() {
 
     // Variables to change
     const DELAY = 11;
-    const NEW_MIN_DEBT = ethers.utils.parseEther("100");
+    const NEW_MIN_DEBT = ethers.utils.parseEther("10");
 
     // Do not change this line
     const iface = new Interface(["function setMinNetDebt(uint)"]);

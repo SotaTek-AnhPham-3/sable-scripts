@@ -25,7 +25,7 @@ async function main() {
     const salt = defaultAbiCoder.encode(["uint"], [0]);
 
     // Variables to change
-    const NEW_MIN_DEBT = ethers.utils.parseEther("100");
+    const NEW_MIN_DEBT = ethers.utils.parseEther("10");
 
     const iface = new Interface(["function setMinNetDebt(uint)"]);
     const DATA = iface.encodeFunctionData("setMinNetDebt", [NEW_MIN_DEBT.toString()]);
@@ -43,6 +43,6 @@ main().catch(error => {
 });
   
 /*
-ENV=demo npx hardhat run scripts/timeLock/minNetDebtSchedule.js --network bscTestnet
-ENV=oracle npx hardhat run scripts/timeLock/minNetDebtSchedule.js --network bscTestnet
+ENV=demo npx hardhat run scripts/timeLock/minNetDebtExecute.js --network bscTestnet
+ENV=oracle npx hardhat run scripts/timeLock/minNetDebtExecute.js --network bscTestnet
 */

@@ -26,7 +26,7 @@ async function main() {
 
     // Variables to change
     const DELAY = 11;
-    const NEW_GAS_COMPENSATION = ethers.utils.parseEther("150");
+    const NEW_GAS_COMPENSATION = ethers.utils.parseEther("10");
 
     // Do not change this line
     const iface = new Interface(["function setLUSDGasCompensation(uint)"]);
