@@ -42,12 +42,21 @@ async function main() {
     // change this line
     let deviationPyth = 0.2; // 0.2%
     let conf = BigInt(mockPrice);
-    
 
     const currentBlock = await ethers.provider.getBlockNumber();
     const now = (await ethers.provider.getBlock(currentBlock)).timestamp; 
 
-    let tx = await MockPyth.mockPrices(PRICE_ID, BigInt(mockPrice), BigInt(conf), )
+    let tx = await MockPyth.mockPrices(
+      PRICE_ID, 
+      BigInt(mockPrice), 
+      BigInt(conf), 
+      EXPO, 
+      BigInt(mockPrice), 
+      BigInt(conf), 
+      BigInt(now)
+    );
+
+    await tx.wait();
     
 }
 

@@ -20,7 +20,7 @@ async function main() {
     const provider = new ethers.providers.JsonRpcProvider(rpc, chainId);
     const signer = new ethers.Wallet("8b5a09b55c9b838a8f5070b3540b2d15d748a5884594a0d729eb5ad36a09bffd", provider);
 
-    const userAddress = "0xe8d13eebaa469d86b4d3f1a18b5363b7e07e2c3b"
+    const userAddress = "0xeB0C2735F972F96F271b0a71d7FB18BaafE60Ac6"
 
     const Contract = new ethers.Contract(contractAddress, abi.abi, signer);
     const LUSDContract = new ethers.Contract(lusdAddress, lusdAbi.abi, signer);
