@@ -26,7 +26,7 @@ async function main() {
 
     // Variables to change
     const DELAY = 11;
-    let NEW_BORROWING_FEE_FLOOR = "0.75"; // %
+    let NEW_BORROWING_FEE_FLOOR = "0.05"; // %
 
     // Do not change this line
     const iface = new Interface(["function setBorrowingFeeFloor(uint)"]);
