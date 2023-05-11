@@ -1,4 +1,5 @@
 async function main() {
+    const ONE = 1e18;
     const DECIMAL_PRECISION = 1e14;
     const MAX_ORACLE_RATE_PERCENTAGE = 25e14;
 
@@ -16,6 +17,7 @@ async function main() {
     }
 
     console.log("oracle rate: ", oracleRate);
+    console.log(`Oracle rate: ${oracleRate / ONE * 100}%`)
 
 }
 
